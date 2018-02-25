@@ -13,15 +13,24 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
 public class Demo {
 
-	public static void main(String[] args) {
-		TestDate();
-
+	public static void main(String[] args) throws ParseException {
+		
+		//Example formate date
+		String fromDate = "19052009";
+		DateFormat df = new SimpleDateFormat("ddMMyyyy");
+		DateFormat iso = new SimpleDateFormat("dd-MM-yyyy");
+		Date d = df.parse(fromDate);
+		GregorianCalendar isoCalendar = new GregorianCalendar();
+		iso.setCalendar(isoCalendar);
+		System.out.println(iso.format(d));
+	
 	}
 
 	private void Test1() {
@@ -102,5 +111,5 @@ public class Demo {
 		System.out.println("Java 8 Version3: " + localDateTime.format(formatter2));
 
 	}
-
+	
 }
