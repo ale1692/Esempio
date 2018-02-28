@@ -1,13 +1,11 @@
 package it.collection;
 
-import java.util.Iterator;
 import java.util.List;
 
 public class DemoCart {
 
 	public static void main(String[] args) {
 
-		ShoppingCart<Prodotto> cart;
 		ShoppingCartImpl implCart = new ShoppingCartImpl();
 		Prodotto p1 = new Prodotto("aaa", 20);
 		Prodotto p2 = new Prodotto("bbb", 10);
